@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  get 'abouts/top'
   get 'users/show'
   get 'users/update'
   devise_for :users
