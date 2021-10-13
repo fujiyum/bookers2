@@ -6,8 +6,8 @@ class UsersControllerTest < ActionDispatch::IntegrationTest
     assert_response :success
   end
 
-  test "should get update" do
-    get users_update_url
+  test "should get edit" do
+    get users_edit_url
     assert_response :success
   end
 
