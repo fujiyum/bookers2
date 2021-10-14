@@ -1,0 +1,15 @@
+<h1>5</h1>
+<% @user.each do |user_info| %>
+<div>
+  <%= attachment_image_tag user_info, :image %>
+  <p><%= image_tag('sample-author1.jpg') %></p>
+  <p>name <%= user_info.user.name %></p>
+  <p>introduction <%= user_info.introduction %></p>
+
+  <div class="actions">
+  <%= link_to edit_users_path(user.id) do %>
+    <i class="fas fa-user-plus"></i>
+  <% end %>
+  </div>
+</div>
+<% end %>
