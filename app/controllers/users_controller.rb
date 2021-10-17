@@ -5,9 +5,6 @@ class UsersController < ApplicationController
   end
 
   def create
-   @book = Book.new(book_params)
-   @book = Book.save
-   redirect_to book_path(@book.id)
   end
 
   def show
