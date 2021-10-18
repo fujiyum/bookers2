@@ -5,16 +5,19 @@
      <div class="from-group">
       <%= form_with model:@book, local:true do |f| %>
       <label for="book_title">Title</label>
-      <div><%= f.text_field :title, autofocus: true %></div>
-      <% end %>
+      <div><%= f.text_field :title %></div>
      </div>
      <div class="from-group">
-      <%= form_with model:@book, local:true do |f| %>
       <label for="book_body">Opinion</label>
-      <div><%= f.text_field :body, autofocus: true %></div>
+      <div><%= f.text_field :body %></div>
      </div>
-     <%= f.submit "Update Book" %>
+     <%= f.submit 'Update Book', class:'btn btn-success' %>
      <% end %>
+     <div>
+     <%= link_to "Show", user_path(@user.id) %>
+     |
+     <%= link_to "back", books_path %>
+     </div>
     </div>
    </div>
  </div>
