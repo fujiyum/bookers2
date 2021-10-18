@@ -12,6 +12,9 @@
            <td>
             <%= link_to user_path(current_user.id) do %>
             <%= attachment_image_tag @user, :profile_image, :fill, 10, 10, fallback: "no_image.jpg", size:'40x40' %>
+            <div>
+            <%= @user.name %>
+            </div>
             <% end %>
            </td>
            <td>
@@ -22,16 +25,16 @@
            <td><%= @book.body %></td>
            <% if @book.user == current_user %>
            <td>
-             <button type="button" class="btn btn-outline-secondary">
-              <%= link_to edit_book_path(@book.id), class:'nav-link text-light' do %>
-              <i>edit</i>
+             <button type="button" class="btn btn-success btn-sm">
+              <%= link_to edit_book_path(@book.id), class:'text-light' do %>
+              <i>Edit</i>
               <% end %>
              </button>
            </td>
            <td>
-             <button type="button" class="btn btn-outline-secondary">
-              <%= link_to book_path(@book.id), method: :delete, class:'nav-link text-light' do %>
-              <i>delete</i>
+             <button type="button" class="btn btn-danger btn-sm">
+              <%= link_to book_path(@book.id), method: :delete, class:'text-light' do %>
+              <i>Delete</i>
               <% end %>
              </button>
            </td>

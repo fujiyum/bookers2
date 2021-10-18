@@ -1,0 +1,20 @@
+<div class="container">
+  <div class="row">
+    <div class="px-5 mx-auto">
+     <h1>Editing Book</h1>
+     <div class="from-group">
+      <%= form_with model:@book, local:true do |f| %>
+      <label for="book_title">Title</label>
+      <div><%= f.text_field :title, autofocus: true %></div>
+      <% end %>
+     </div>
+     <div class="from-group">
+      <%= form_with model:@book, local:true do |f| %>
+      <label for="book_body">Opinion</label>
+      <div><%= f.text_field :body, autofocus: true %></div>
+     </div>
+     <%= f.submit "Update Book" %>
+     <% end %>
+    </div>
+   </div>
+ </div>

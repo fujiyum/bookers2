@@ -19,6 +19,7 @@ def show
 end
 
 def edit
+ @book = Book.find(params[:id])
 end
 
 def destroy
@@ -31,10 +32,6 @@ private
 
 def book_params
     params.require(:book).permit(:title, :body)
-end
-
-def user_params
-    params.require(:user).permit(:name, :introduction, :profile_image)
 end
 
 end
