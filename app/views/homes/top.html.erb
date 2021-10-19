@@ -6,21 +6,20 @@
       <p class="mb-3">you can share and exchange your opinions , inpressions , and emotions</p>
       <p class="mb-3">about various books!</p>
 
-      <div class="button-wrapper">
+      <div class="button-wrapper mx-auto">
         <div class="row">
-          <div class="mx-auto">
+         <div class="col-10 mx-auto">
             <%= link_to new_user_session_path do %>
-            <button type="button" class="btn btn-info btn-sm btn-block mb-3">Log in</button>
+            <button type="button" class="btn btn-info btn-sm mb-3 mx-auto btn-block">Log in</button>
             <% end %>
-          </div>
+         </div>
         </div>
 
         <div class="row">
-         <div class="mx-auto">
+         <div class="col-10 mx-auto">
           <%= link_to new_user_registration_path do %>
-           <button type="button" class="btn btn-success btn-sm btn-block">Sign up</button>
+           <button type="button" class="btn btn-success btn-sm mx-auto btn-block">Sign up</button>
           <% end %>
-         </div>
         </div>
       </div>
   </div>
