@@ -1,3 +1,9 @@
+<div class="Notification">
+  <% flash.each do |key, value| %>
+  <%= content_tag :div, value, class: key %>
+  <% end %>
+</div>
+
 <div class="container">
  <div class="row">
   <div class="mx-auto mt-3 col-11 col-sm-10 col-lg-8 col-xl-6">
@@ -9,17 +15,13 @@
       <div class="button-wrapper mx-auto">
         <div class="row">
          <div class="col-10 mx-auto">
-            <%= link_to new_user_session_path do %>
-            <button type="button" class="btn btn-info btn-sm mb-3 mx-auto btn-block">Log in</button>
-            <% end %>
+            <%= link_to "Log in", new_user_session_path,  class:"btn btn-info btn-sm mb-3 mx-auto btn-block" %>
          </div>
         </div>
 
         <div class="row">
          <div class="col-10 mx-auto">
-          <%= link_to new_user_registration_path do %>
-           <button type="button" class="btn btn-success btn-sm mx-auto btn-block">Sign up</button>
-          <% end %>
+          <%= link_to "Sign up", new_user_registration_path, class:"btn btn-success btn-sm mx-auto btn-block" %>
         </div>
       </div>
   </div>
